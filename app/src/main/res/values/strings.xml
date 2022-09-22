@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BeyondZero</string>
+
+    ///Onboard screen headings
+    <string name="heading1">OUR STORY</string>
+    <string name="heading2">OUR FOUNDER</string>
+    <string name="heading3">OUR APPROACH</string>
+    <string name="heading4">0UR IMPACT</string>
+
+
+    //Onboard screen descriptions
+    <string name="desc1">The idea of Beyond Zero was conceived in June 2013 when Her Excellency Margaret Kenyatta the First Lady of the Republic of Kenya committed to heighten advocacy efforts aimed at reducing preventable maternal and child deaths, as well as elimination of mother to child transmission of HIV and Syphilis.</string>
+    <string name="desc2">Her Excellency supports and is Patron of numerous social concerns. On a regional front, The First Lady is a strong advocate and active member of the African Union Organization of First Ladies for Development (OAFLAD), an advocacy organization where First Ladies of Africa seek to leverage their unique position to advocate for policies.</string>
+    <string name="desc3">Beyond Zero advocacy work is informed by its Strategic Frameworks: The Strategic Framework on Engagement for HIV Control and Promotion of Maternal, Newborn and Child Health, 2013-2017 and The Strategic Framework for the Engagement of the First Lady in the Promotion of Health Lives of Women, Children and Adolescents, 2018-2022.</string>
+    <string name="desc4">The Beyond Zero Initiative aims to catalyze action towards provision of healthcare services through advocacy, resource mobilization and partnerships. The key programs spearheaded by the Initiative in collaboration with partners are highlighted below.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
