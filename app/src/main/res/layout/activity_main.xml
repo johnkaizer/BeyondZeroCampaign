@@ -7,20 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabLayout"/>
+        android:layout_above="@+id/tabLayout_home"/>
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/tabLayout_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabMaxWidth="0dp"
         app:tabGravity="fill"
         app:tabMode="fixed"
-        android:background="@color/white"
-        app:tabIndicatorColor="@color/blue"
+        android:background="@color/blue"
+        app:tabIndicatorColor="@color/white"
         android:layout_alignParentBottom="true">
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -30,13 +30,13 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Schedule"
+            android:text="Book"
             android:icon="@drawable/appointments_24"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lab"
-            android:icon="@drawable/person_24"/>
+            android:icon="@drawable/flask"/>
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

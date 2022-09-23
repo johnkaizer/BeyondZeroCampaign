@@ -105,7 +105,7 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
 
             if (position > 0){
                 backbtn.setVisibility(View.VISIBLE);
-            }else {
+            }else if (position < 1){
                 backbtn.setVisibility(View.INVISIBLE);
             }
 
