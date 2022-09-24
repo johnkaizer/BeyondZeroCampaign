@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_margin="3dp"
     app:cardCornerRadius="10dp"
-    app:cardElevation="5dp">
+    app:cardElevation="5dp"
+    android:backgroundTint="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,8 +15,10 @@
 
         <ImageView
             android:id="@+id/doc_image"
-            android:layout_width="100dp"
-            android:layout_height="90dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
             android:layout_marginBottom="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/doc1"
@@ -39,7 +42,6 @@
             android:id="@+id/patient_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:background="@drawable/patient_back"
             android:padding="3dp"
             android:text="2"
@@ -87,7 +89,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_marginEnd="4dp"
             android:src="@drawable/heart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
