@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment"
+    tools:context=".Fragments.ProfileFragment"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -126,6 +126,7 @@
             android:layout_marginEnd="50dp"
             android:background="@drawable/call_btn_background"
             android:text="View Resources"
+            android:onClick="open"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -144,6 +145,7 @@
             android:backgroundTint="@color/white"
             app:cardCornerRadius="10dp"
             app:cardElevation="10dp"
+            app:contentPadding="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatButton2">

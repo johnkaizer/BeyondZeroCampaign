@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
+    tools:context=".Activites.SignUpActivity"
     android:orientation="vertical">
     <ImageView
         android:layout_width="match_parent"
@@ -85,6 +85,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/phone_24"
+        android:drawableTint="@color/white"
         android:layout_marginTop="10dp"
         android:drawablePadding="14dp"
         android:hint="phone"

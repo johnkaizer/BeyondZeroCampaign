@@ -3,12 +3,15 @@ package com.project.beyondzero;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 import com.project.beyondzero.Adapter.ViewPagerAdapter;
+import com.project.beyondzero.Fragments.AppiontmenFragment;
+import com.project.beyondzero.Fragments.HomeFragment;
+import com.project.beyondzero.Fragments.LabFragment;
+import com.project.beyondzero.Fragments.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPagerAdapter viewPagerAdapter;

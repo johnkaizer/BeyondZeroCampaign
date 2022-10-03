@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.project.beyondzero.AppiontmenFragment;
+import com.project.beyondzero.Fragments.AppiontmenFragment;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
 

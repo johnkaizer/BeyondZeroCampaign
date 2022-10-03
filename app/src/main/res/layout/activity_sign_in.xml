@@ -132,50 +132,5 @@
       app:layout_constraintStart_toEndOf="@+id/textView4"
       app:layout_constraintTop_toTopOf="@+id/textView4" />
 
-  <TextView
-      android:id="@+id/or"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="50dp"
-      android:gravity="center"
-      android:text="Or sign in with"
-      android:textColor="@color/white"
-      android:textSize="18sp"
-      android:textStyle="bold"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-  <LinearLayout
-      android:id="@+id/linear1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="45dp"
-      android:paddingLeft="100dp"
-      android:paddingRight="100dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
-
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@drawable/facebook" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@drawable/google" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:src="@drawable/twitter" />
-
-  </LinearLayout>
 
   </androidx.constraintlayout.widget.ConstraintLayout>

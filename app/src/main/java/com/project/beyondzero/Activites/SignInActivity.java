@@ -8,7 +8,6 @@ import android.view.View;
 
 import com.project.beyondzero.MainActivity;
 import com.project.beyondzero.R;
-import com.project.beyondzero.SignUpActivity;
 
 public class SignInActivity extends AppCompatActivity {
 

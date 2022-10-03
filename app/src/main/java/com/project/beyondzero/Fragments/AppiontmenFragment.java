@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.project.beyondzero.Adapter.AppointmentsAdapter;
 import com.project.beyondzero.Model.AppointmentsModel;
+import com.project.beyondzero.R;
 
 import java.util.ArrayList;
 

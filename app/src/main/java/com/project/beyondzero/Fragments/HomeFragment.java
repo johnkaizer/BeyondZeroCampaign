@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Fragments;
 
 import android.os.Bundle;
 
@@ -14,6 +14,7 @@ import com.project.beyondzero.Adapter.DoctorsAdapter;
 import com.project.beyondzero.Adapter.NewsFeedAdapter;
 import com.project.beyondzero.Model.DoctorsModel;
 import com.project.beyondzero.Model.NewsFeedModel;
+import com.project.beyondzero.R;
 
 import java.util.ArrayList;
 

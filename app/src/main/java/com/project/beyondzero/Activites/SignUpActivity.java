@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.project.beyondzero.Activites.SignInActivity;
+import com.project.beyondzero.MainActivity;
+import com.project.beyondzero.R;
 
 public class SignUpActivity extends AppCompatActivity {
 

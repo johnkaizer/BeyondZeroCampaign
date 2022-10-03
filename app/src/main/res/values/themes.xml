@@ -12,10 +12,12 @@
         <item name="android:statusBarColor">#2196F3</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="Theme.BeyondZero.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="Theme.BeyondZero.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.BeyondZero.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

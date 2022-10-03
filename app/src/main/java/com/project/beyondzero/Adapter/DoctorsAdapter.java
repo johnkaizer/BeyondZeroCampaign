@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.project.beyondzero.HomeFragment;
+import com.project.beyondzero.Fragments.HomeFragment;
 import com.project.beyondzero.Model.DoctorsModel;
 import com.project.beyondzero.R;
 
