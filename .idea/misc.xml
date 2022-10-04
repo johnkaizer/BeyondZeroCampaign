@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_create_appointment.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_hospital_resources.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_sign_up.xml" value="0.1675929884566054" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_appiontmen.xml" value="0.1675929884566054" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_profile.xml" value="0.1675929884566054" />
       </map>
     </option>

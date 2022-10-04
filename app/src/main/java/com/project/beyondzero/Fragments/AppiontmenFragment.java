@@ -1,8 +1,10 @@
 package com.project.beyondzero.Fragments;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.project.beyondzero.Adapter.AppointmentsAdapter;
+import com.project.beyondzero.CreateAppointmentActivity;
+import com.project.beyondzero.HospitalResourcesActivity;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
 
@@ -22,6 +26,8 @@ public class AppiontmenFragment extends Fragment {
     RecyclerView appointmentRec;
     AppointmentsAdapter appointmentsAdapter ;
     ArrayList<AppointmentsModel> appointmentsModelList;
+
+    CardView cardView2;
 
 
     @SuppressLint("MissingInflatedId")
@@ -46,6 +52,14 @@ public class AppiontmenFragment extends Fragment {
         appointmentRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
         appointmentRec.setHasFixedSize(true);
         appointmentRec.setNestedScrollingEnabled(false);
+
+        cardView2=root.findViewById(R.id.cardView1);
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), CreateAppointmentActivity.class));
+            }
+        });
 
         return root;
     }
