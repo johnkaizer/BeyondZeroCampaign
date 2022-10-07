@@ -1,6 +1,8 @@
 package com.project.beyondzero.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.project.beyondzero.CreateAppointment1;
 import com.project.beyondzero.Fragments.HomeFragment;
 import com.project.beyondzero.Model.DoctorsModel;
 import com.project.beyondzero.R;
@@ -35,13 +38,31 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DoctorsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.image.setImageResource(list.get(position).getImage());
         holder.title_image.setImageResource(list.get(position).getTitle_image());
         holder.time.setText(list.get(position).getTime());
         holder.name.setText(list.get(position).getName());
         holder.title.setText(list.get(position).getTitle());
         holder.patients.setText(list.get(position).getPatients());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CreateAppointment1.class);
+                intent.putExtra("image",list.get(position).getImage());
+                intent.putExtra("time",list.get(position).getTime());
+                intent.putExtra("name",list.get(position).getName());
+                intent.putExtra("title",list.get(position).getTitle());
+                intent.putExtra("patients",list.get(position).getPatients());
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+
+            }
+        });
+
+
 
     }
 

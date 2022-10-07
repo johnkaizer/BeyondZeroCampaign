@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_create_appointment.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_create_appointment.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_create_appointment1.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_edit_infor.xml" value="0.1675929884566054" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_hospital_resources.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_sign_up.xml" value="0.1675929884566054" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/doctor_item_card.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_appiontmen.xml" value="0.1675929884566054" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_home.xml" value="0.1675929884566054" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_profile.xml" value="0.1675929884566054" />
       </map>
     </option>
@@ -18,12 +22,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>

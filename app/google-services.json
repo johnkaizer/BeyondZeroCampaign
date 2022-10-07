@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "894989926480",
+    "project_id": "beyond-zero-d28fc",
+    "storage_bucket": "beyond-zero-d28fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894989926480:android:3dbe0ad0d2cb05799f1155",
+        "android_client_info": {
+          "package_name": "com.project.beyondzero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894989926480-0os8qtkookdfl2d3ro615o81g0cf8849.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQZp-cn66jBB5o73AJZVHVj0gsgcmEK_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894989926480-0os8qtkookdfl2d3ro615o81g0cf8849.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
