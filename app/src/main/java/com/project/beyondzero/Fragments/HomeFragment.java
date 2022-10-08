@@ -38,13 +38,13 @@ public class HomeFragment extends Fragment {
         doctorRec = root.findViewById(R.id.doc_recyclerview);
         doctorsModelList = new ArrayList<>();
 
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc1,R.drawable.heart,"Dr. John Kimm","3","1:00pm","Cardiologist"));
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc2,R.drawable.legs,"Dr. Mary Tiana","5","3:00pm","Cardiologist"));
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc3,R.drawable.brain,"Dr. Joan Kenny","1","11:00am","Cardiologist"));
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc4,R.drawable.tooth,"Dr. Joseph Killstone","3","1:00pm","Cardiologist"));
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc5,R.drawable.heart,"Dr. Joshua Turner","3","1:00pm","Cardiologist"));
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc6,R.drawable.heart,"Dr. Angela Kith","3","1:00pm","Cardiologist"));
-        doctorsModelList.add(new DoctorsModel(R.drawable.doc7,R.drawable.heart,"Dr. John Kimm","3","1:00pm","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc1,R.drawable.heart,"Dr. John Kimm","0","1:00pm","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc2,R.drawable.legs,"Dr. Mary Tiana","0","3:00pm","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc3,R.drawable.brain,"Dr. Joan Kenny","0","11:00am","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc4,R.drawable.tooth,"Dr. Joseph Killstone","0","1:00pm","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc5,R.drawable.heart,"Dr. Joshua Turner","0","1:00pm","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc6,R.drawable.heart,"Dr. Angela Kith","0","1:00pm","Cardiologist"));
+        doctorsModelList.add(new DoctorsModel(R.drawable.doc7,R.drawable.heart,"Dr. John Kimm","0","1:00pm","Cardiologist"));
         doctorsModelList.add(new DoctorsModel(R.drawable.doc8,R.drawable.heart,"Dr. John Kimm","3","1:00pm","Cardiologist"));
         doctorsModelList.add(new DoctorsModel(R.drawable.doc9,R.drawable.heart,"Dr. John Kimm","3","1:00pm","Cardiologist"));
         doctorsModelList.add(new DoctorsModel(R.drawable.doc10,R.drawable.heart,"Dr. John Kimm","3","1:00pm","Cardiologist"));
@@ -68,8 +68,8 @@ public class HomeFragment extends Fragment {
 
         newsFeedModelList.add(new NewsFeedModel(R.drawable.news1,"MAY 24, 2018","First Lady Calls on Kenyans to Embrace Universal Healthcare Initiatives"));
         newsFeedModelList.add(new NewsFeedModel(R.drawable.news2,"APRIL 28, 2018","First Lady Opens Heart Management Conference"));
-        newsFeedModelList.add(new NewsFeedModel(R.drawable.news3,"MAY 22, 2018","First Lady Delivers Medical Equipment to Bungoma County"));
-        newsFeedModelList.add(new NewsFeedModel(R.drawable.news4,"APRIL 25, 2018","Beyond Zero Commended for Championing Quality Medical Services for Women and Children"));
+        newsFeedModelList.add(new NewsFeedModel(R.drawable.oxygen,"13/07/2020","Deputy President William Ruto launched equipment at the Mama Lucy Kibaki Level 5 "));
+        newsFeedModelList.add(new NewsFeedModel(R.drawable.nms,"JULY 13, 2020","MAMA LUCY KIBAKI HOSPITAL RECEIVES PPE DONATIONS"));
 
 
         newsFeedAdapter = new NewsFeedAdapter(getActivity(), newsFeedModelList, this);

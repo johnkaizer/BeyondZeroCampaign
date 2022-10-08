@@ -12,12 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.project.beyondzero.Adapter.AppointmentsAdapter;
 import com.project.beyondzero.CreateAppointmentActivity;
 import com.project.beyondzero.HospitalResourcesActivity;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
+import com.project.beyondzero.ViewAllActivity;
 
 import java.util.ArrayList;
 
@@ -28,6 +30,7 @@ public class AppiontmenFragment extends Fragment {
     ArrayList<AppointmentsModel> appointmentsModelList;
 
     CardView cardView2;
+    Button all_btn;
 
 
     @SuppressLint("MissingInflatedId")
@@ -36,6 +39,15 @@ public class AppiontmenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_appiontmen, container, false);
+
+        all_btn= root.findViewById(R.id.all);
+        all_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ViewAllActivity.class));
+
+            }
+        });
 
         appointmentRec = root.findViewById(R.id.Appointments);
         appointmentsModelList = new ArrayList<>();

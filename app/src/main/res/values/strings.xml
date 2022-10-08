@@ -24,4 +24,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    ///FAQS
+    <string name="about">The Beyond Zero Campaign is an initiative launched by Kenyas former First Lady, Margaret Gakuo Kenyatta. Its goals are to improve maternal and child health in Kenya, and to reduce new HIV infections among children.The campaigns first action was the donation of fully equipped mobile clinics to several counties in Kenya during the summer of 2014, beginning with Taita Taveta County.</string>
+    <string name="hospital">Mama Lucy Kibaki Hospital is a level-5 Hospital located in the City of Nairobi’s populous Embakasi Constituency.  Its precise location is between Umoja-II and Komarock Estates 11KM East of the city centre at the junction of Kangundo road and Kayole Spine road. </string>
+    <string name="maternal">Maternal health is the health of the gestational parent during pregnancy, childbirth, and the postpartum period. In the community, there is movement towards the term "gestational parent" rather than "mother" to be inclusive of people who can become pregnant and identify as various genders</string>
+    <string name="impact">The Beyond Zero Initiative aims to catalyze action towards provision of healthcare services through advocacy, resource mobilization and partnerships,</string>
+
 </resources>

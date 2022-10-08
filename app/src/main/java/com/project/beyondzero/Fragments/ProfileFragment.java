@@ -23,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.project.beyondzero.Activites.SignInActivity;
 import com.project.beyondzero.EditInforActivity;
+import com.project.beyondzero.FQSActivity;
+import com.project.beyondzero.FeedBackActivity;
 import com.project.beyondzero.HospitalResourcesActivity;
 import com.project.beyondzero.R;
 import com.project.beyondzero.Model.User;
@@ -36,6 +38,7 @@ public class ProfileFragment extends Fragment {
     private String userID;
 
     Button button, btn,logout;
+    TextView faqs,feedback;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,6 +50,21 @@ public class ProfileFragment extends Fragment {
         btn=root.findViewById(R.id.editbtn);
         logout = root.findViewById(R.id.logout);
         progressBar = root.findViewById(R.id.progressBar);
+        faqs = root.findViewById(R.id.textView25);
+        feedback = root.findViewById(R.id.textView28);
+        faqs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), FQSActivity.class));
+            }
+        });
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), FeedBackActivity.class));
+            }
+        });
+
 
 
         button.setOnClickListener(new View.OnClickListener() {
