@@ -1,8 +1,0 @@
-
-
-java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(ŽÖ£Üüÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õÃ°Úÿÿÿÿÿ
-[
-java:S1172"9Remove this unused method parameter "appiontmenFragment".(ŽÖ£Üüÿÿÿÿ8˜ù“®·0
-W
-java:S16595"ADeclare "date" and all following declarations on a separate line.(Áÿˆ”

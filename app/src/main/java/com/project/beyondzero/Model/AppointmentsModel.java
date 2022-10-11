@@ -1,26 +1,42 @@
 package com.project.beyondzero.Model;
 
 public class AppointmentsModel {
-    int image;
+    private int id;
+    byte[]avatar;
     String name;
     String date;
     String time;
     String title;
+    int phone;
+    String patient;
 
-    public AppointmentsModel(int image, String name, String date, String time, String title) {
-        this.image = image;
+
+    public AppointmentsModel(int id, byte[] avatar, String name, String date, String time, String title, int phone, String patient) {
+        this.id = id;
+        this.avatar = avatar;
         this.name = name;
         this.date = date;
         this.time = time;
         this.title = title;
+        this.phone = phone;
+        this.patient = patient;
+
     }
 
-    public int getImage() {
-        return image;
+    public int getId() {
+        return id;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public byte[] getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
     }
 
     public String getName() {
@@ -53,5 +69,21 @@ public class AppointmentsModel {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public String getPatient() {
+        return patient;
+    }
+
+    public void setPatient(String patient) {
+        this.patient = patient;
     }
 }

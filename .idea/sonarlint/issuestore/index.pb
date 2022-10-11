@@ -26,12 +26,8 @@ v
 Fapp/src/main/java/com/project/beyondzero/Adapter/ViewPagerAdapter.java,c\2\c2ed4a3df914a1f0f97ad7ce555e0c8e557f53c8
 q
 Aapp/src/main/java/com/project/beyondzero/Model/NewsFeedModel.java,b\5\b5415186d38fbf5b665466750c6df40da651b719
-u
-Eapp/src/main/java/com/project/beyondzero/Model/AppointmentsModel.java,d\f\df65399ab6d9a21edbc85caf1f5d8b17016f2279
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-y
-Iapp/src/main/java/com/project/beyondzero/Adapter/AppointmentsAdapter.java,3\2\327b7fc876d5232140e7f74e9e838ff8fd47d693
 k
 ;app/src/main/java/com/project/beyondzero/FirstFragment.java,d\1\d1d68641b10aea0c7af22f9fbcef641dfa4190d3
 w

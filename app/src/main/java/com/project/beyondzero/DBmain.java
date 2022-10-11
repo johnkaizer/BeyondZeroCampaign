@@ -16,7 +16,7 @@ public class DBmain extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "create table "+TABLENAME+" (id integer primary key, avatar blob, name text, title text,patient text, time text,phone integer)";
+        String query = "create table "+TABLENAME+" (id integer primary key, avatar blob, name text, title text,patient text, time text,phone integer,date text)";
         db.execSQL(query);
     }
 

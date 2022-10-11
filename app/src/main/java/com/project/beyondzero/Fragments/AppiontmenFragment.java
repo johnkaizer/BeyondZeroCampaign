@@ -1,7 +1,11 @@
 package com.project.beyondzero.Fragments;
 
+import static com.project.beyondzero.DBmain.TABLENAME;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -16,6 +20,7 @@ import android.widget.Button;
 
 import com.project.beyondzero.Adapter.AppointmentsAdapter;
 import com.project.beyondzero.CreateAppointmentActivity;
+import com.project.beyondzero.DBmain;
 import com.project.beyondzero.HospitalResourcesActivity;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
@@ -25,6 +30,8 @@ import java.util.ArrayList;
 
 
 public class AppiontmenFragment extends Fragment {
+    DBmain dBmain;
+    SQLiteDatabase sqLiteDatabase;
     RecyclerView appointmentRec;
     AppointmentsAdapter appointmentsAdapter ;
     ArrayList<AppointmentsModel> appointmentsModelList;
@@ -37,33 +44,15 @@ public class AppiontmenFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_appiontmen, container, false);
+        appointmentRec = root.findViewById(R.id.Appointments);
+        dBmain = new DBmain(getContext());
+        displayData();
 
         all_btn= root.findViewById(R.id.all);
-        all_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getContext(), ViewAllActivity.class));
-
-            }
-        });
-
-        appointmentRec = root.findViewById(R.id.Appointments);
-        appointmentsModelList = new ArrayList<>();
-
-        appointmentsModelList.add(new AppointmentsModel(R.drawable.doc1,"Dr.Micheal Kean","29th Sept 2022","12:00pm","Gynaecologist"));
-        appointmentsModelList.add(new AppointmentsModel(R.drawable.doc2,"Dr.Mary Anne ","1st Oct 2022","2:00pm","Gynaecologist"));
-        appointmentsModelList.add(new AppointmentsModel(R.drawable.doc3,"Dr.Shingih Shrwata","5th Oct 2022","2:00pm","Gynaecologist"));
-        appointmentsModelList.add(new AppointmentsModel(R.drawable.doc4,"Dr.Joseph Kante","8th Oct 2022","11:00am","Gynaecologist"));
-        appointmentsModelList.add(new AppointmentsModel(R.drawable.doc5,"Dr.Steve GreyHood ","10th Oct 2022","10:00am","Gynaecologist"));
-
-
-        appointmentsAdapter = new AppointmentsAdapter(getActivity(), appointmentsModelList, this);
-        appointmentRec.setAdapter(appointmentsAdapter);
         appointmentRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
-        appointmentRec.setHasFixedSize(true);
-        appointmentRec.setNestedScrollingEnabled(false);
 
         cardView2=root.findViewById(R.id.cardView1);
         cardView2.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +61,35 @@ public class AppiontmenFragment extends Fragment {
                 startActivity(new Intent(getContext(), CreateAppointmentActivity.class));
             }
         });
+        all_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ViewAllActivity.class));
+
+            }
+        });
 
         return root;
+    }
+
+
+    private void displayData() {
+        sqLiteDatabase = dBmain.getWritableDatabase();
+        Cursor cursor  = sqLiteDatabase.rawQuery("select * from "+TABLENAME+"",null);
+        ArrayList<AppointmentsModel>models = new ArrayList<>();
+        while (cursor.moveToNext()){
+            int id = cursor.getInt(0);
+            byte[]avatar = cursor.getBlob(1);
+            String name = cursor.getString(2);
+            String title = cursor.getString(3);
+            String patient = cursor.getString(4);
+            String time = cursor.getString(5);
+            int phone = cursor.getInt(6);
+            String date = cursor.getString(7);
+            models.add(new AppointmentsModel(id,avatar,name,title,patient,time,phone,date));
+        }
+        cursor.close();
+        appointmentsAdapter = new AppointmentsAdapter(getContext(), models, R.layout.appointment_item,sqLiteDatabase);
+        appointmentRec.setAdapter(appointmentsAdapter);
     }
 }
