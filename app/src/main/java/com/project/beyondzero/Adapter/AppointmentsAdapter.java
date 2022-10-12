@@ -1,9 +1,11 @@
 package com.project.beyondzero.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.project.beyondzero.CreateAppointment1;
 import com.project.beyondzero.Fragments.AppiontmenFragment;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
@@ -28,14 +31,14 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
 
     Context context;
     ArrayList<AppointmentsModel>list;
-    int singledata;
     SQLiteDatabase sqLiteDatabase;
+    int appointment_item;
 
-    public AppointmentsAdapter(Context context, ArrayList<AppointmentsModel> list, int singledata, SQLiteDatabase sqLiteDatabase) {
+    public AppointmentsAdapter(Context context, ArrayList<AppointmentsModel> list, SQLiteDatabase sqLiteDatabase, int appointment_item) {
         this.context = context;
         this.list = list;
-        this.singledata = singledata;
         this.sqLiteDatabase = sqLiteDatabase;
+        this.appointment_item = appointment_item;
     }
 
     @NonNull
@@ -65,6 +68,19 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()){
                             case R.id.edit_menu:
+
+                                Bundle bundle = new Bundle();
+                                bundle.putInt("id",appointmentsModel.getId());
+                                bundle.putByteArray("avatar",appointmentsModel.getAvatar());
+                                bundle.putString("name",appointmentsModel.getName());
+                                bundle.putString("date",appointmentsModel.getDate());
+                                bundle.putString("time",appointmentsModel.getTime());
+                                bundle.putString("title",appointmentsModel.getTitle());
+                                bundle.putString("patient",appointmentsModel.getPatient());
+                                bundle.putInt("phone",appointmentsModel.getPhone());
+                                Intent intent = new Intent(context, CreateAppointment1.class);
+                                intent.putExtra("appointmentData",bundle);
+                                context.startActivity(intent);
 
                                 break;
                             case  R.id.delete_menu:

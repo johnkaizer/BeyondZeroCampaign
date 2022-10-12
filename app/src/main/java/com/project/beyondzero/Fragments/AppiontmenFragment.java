@@ -74,22 +74,22 @@ public class AppiontmenFragment extends Fragment {
 
 
     private void displayData() {
-        sqLiteDatabase = dBmain.getWritableDatabase();
+        sqLiteDatabase = dBmain.getReadableDatabase();
         Cursor cursor  = sqLiteDatabase.rawQuery("select * from "+TABLENAME+"",null);
-        ArrayList<AppointmentsModel>models = new ArrayList<>();
+        ArrayList<AppointmentsModel>list = new ArrayList<>();
         while (cursor.moveToNext()){
             int id = cursor.getInt(0);
             byte[]avatar = cursor.getBlob(1);
             String name = cursor.getString(2);
-            String title = cursor.getString(3);
-            String patient = cursor.getString(4);
-            String time = cursor.getString(5);
-            int phone = cursor.getInt(6);
-            String date = cursor.getString(7);
-            models.add(new AppointmentsModel(id,avatar,name,title,patient,time,phone,date));
+            String date = cursor.getString(3);
+            String time = cursor.getString(4);
+            String title = cursor.getString(5);
+            String patient = cursor.getString(6);
+            int phone = cursor.getInt(7);
+            list.add(new AppointmentsModel(id,avatar,name,title,patient,time,phone,date));
         }
         cursor.close();
-        appointmentsAdapter = new AppointmentsAdapter(getContext(), models, R.layout.appointment_item,sqLiteDatabase);
+        appointmentsAdapter = new AppointmentsAdapter(getContext(), list, sqLiteDatabase, R.layout.appointment_item);
         appointmentRec.setAdapter(appointmentsAdapter);
     }
 }

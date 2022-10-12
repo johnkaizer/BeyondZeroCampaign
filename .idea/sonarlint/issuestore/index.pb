@@ -40,5 +40,3 @@ u
 Eapp/src/main/java/com/project/beyondzero/Adapter/NewsFeedAdapter.java,0\2\025c410e18da52e6273595ba575bd6e452f528f8
 l
 <app/src/main/java/com/project/beyondzero/SecondFragment.java,8\a\8a03a07327d1a19ac51d1590c463acd0812a9ae1
-b
-2app/src/main/java/com/project/beyondzero/User.java,e\d\ed8016858c757496a291186e989c7d475072c37f

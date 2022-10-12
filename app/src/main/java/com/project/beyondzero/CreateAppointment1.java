@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +31,7 @@ public class CreateAppointment1 extends AppCompatActivity {
     TextView title,time,name,patients;
     ImageView image;
     EditText pat_name, pat_time,pat_phone,pat_date;
-    Button submit_btn;
+    Button submit_btn,edit;
     int id =0;
     public static final int STORAGE_REQUEST = 101;
     String[]storagePermission;
@@ -60,8 +61,26 @@ public class CreateAppointment1 extends AppCompatActivity {
         image.setImageResource(ImageUrl);
 
         insertData();
+        editData();
 
 
+    }
+
+    private void editData() {
+        if (getIntent().getBundleExtra("appointmentData")!=null){
+            Bundle bundle = getIntent().getBundleExtra("appointmentData");
+            id=bundle.getInt("id");
+            byte[]bytes = bundle.getByteArray("avatar");
+            Bitmap bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
+            image.setImageBitmap(bitmap);
+            name.setText(bundle.getString("name"));
+            pat_date.setText(bundle.getString("date"));
+            title.setText(bundle.getString("title"));
+            pat_name.setText(bundle.getString("patient"));
+            pat_phone.setText(bundle.getString("phone"));
+            pat_time.setText(bundle.getString("time"));
+
+        }
     }
 
     private void insertData() {
@@ -72,15 +91,15 @@ public class CreateAppointment1 extends AppCompatActivity {
                 ContentValues cv = new ContentValues();
                 cv.put("avatar",ImageViewToByte(image));
                 cv.put("name",name.getText().toString());
+                cv.put("date",pat_date.getText().toString());
+                cv.put("time",pat_time.getText().toString());
                 cv.put("title",title.getText().toString());
                 cv.put("patient",pat_name.getText().toString());
-                cv.put("time",time.getText().toString());
                 cv.put("phone",pat_phone.getText().toString());
-                cv.put("date",pat_date.getText().toString());
                 sqLiteDatabase= dBmain.getWritableDatabase();
                 Long recinsert = sqLiteDatabase.insert(TABLENAME,null,cv);
                 if (recinsert!= null){
-                    Toast.makeText(CreateAppointment1.this,"Booked successfully",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateAppointment1.this,"Session Booked successfully",Toast.LENGTH_SHORT).show();
                     finish();
                     display();
 
@@ -88,6 +107,26 @@ public class CreateAppointment1 extends AppCompatActivity {
 
             }
         });
+        submit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ContentValues cv = new ContentValues();
+                cv.put("avatar",ImageViewToByte(image));
+                cv.put("name",name.getText().toString());
+                cv.put("date",pat_date.getText().toString());
+                cv.put("time",pat_time.getText().toString());
+                cv.put("title",title.getText().toString());
+                cv.put("patient",pat_name.getText().toString());
+                cv.put("phone",pat_phone.getText().toString());
+                sqLiteDatabase= dBmain.getWritableDatabase();
+                int recedit = sqLiteDatabase.update(TABLENAME,cv,"id"+id,null);
+                if (recedit!=-1){
+                    Toast.makeText(CreateAppointment1.this,"Booking successfully edited",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
     }
 
     private void display() {
