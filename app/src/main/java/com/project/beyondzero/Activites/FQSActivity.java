@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.project.beyondzero.R;
 
 public class FQSActivity extends AppCompatActivity {
     TextView details,details1,details2,details3;

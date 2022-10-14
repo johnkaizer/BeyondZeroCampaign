@@ -30,8 +30,6 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 k
 ;app/src/main/java/com/project/beyondzero/FirstFragment.java,d\1\d1d68641b10aea0c7af22f9fbcef641dfa4190d3
-w
-Gapp/src/main/java/com/project/beyondzero/HospitalResourcesActivity.java,e\2\e2f98df700e9eb13ec7639daf8739d8073fbd185
 s
 Capp/src/main/java/com/project/beyondzero/Fragments/LabFragment.java,9\6\9639adc31301ddf8bbad80dcc1f68ce96b07eb1d
 j
@@ -40,3 +38,5 @@ u
 Eapp/src/main/java/com/project/beyondzero/Adapter/NewsFeedAdapter.java,0\2\025c410e18da52e6273595ba575bd6e452f528f8
 l
 <app/src/main/java/com/project/beyondzero/SecondFragment.java,8\a\8a03a07327d1a19ac51d1590c463acd0812a9ae1
+d
+4app/src/main/java/com/project/beyondzero/DBmain.java,e\3\e3793f8021e0b3c20541cdefe5afa09baed06604

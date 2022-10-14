@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import static com.project.beyondzero.DBmain.TABLENAME;
 
@@ -19,7 +19,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.project.beyondzero.Activites.SignInActivity;
+import com.project.beyondzero.DBmain;
+import com.project.beyondzero.MainActivity;
+import com.project.beyondzero.R;
 
 import java.io.ByteArrayOutputStream;
 

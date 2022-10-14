@@ -1,8 +1,10 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.project.beyondzero.R;
 
 public class HospitalResourcesActivity extends AppCompatActivity {
 

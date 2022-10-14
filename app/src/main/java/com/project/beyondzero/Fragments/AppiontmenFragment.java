@@ -19,12 +19,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.project.beyondzero.Adapter.AppointmentsAdapter;
-import com.project.beyondzero.CreateAppointmentActivity;
+import com.project.beyondzero.Activites.CreateAppointmentActivity;
 import com.project.beyondzero.DBmain;
-import com.project.beyondzero.HospitalResourcesActivity;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
-import com.project.beyondzero.ViewAllActivity;
+import com.project.beyondzero.Activites.ViewAllActivity;
 
 import java.util.ArrayList;
 

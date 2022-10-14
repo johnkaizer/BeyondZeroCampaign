@@ -22,10 +22,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.project.beyondzero.Activites.SignInActivity;
-import com.project.beyondzero.EditInforActivity;
-import com.project.beyondzero.FQSActivity;
-import com.project.beyondzero.FeedBackActivity;
-import com.project.beyondzero.HospitalResourcesActivity;
+import com.project.beyondzero.Activites.EditInforActivity;
+import com.project.beyondzero.Activites.FQSActivity;
+import com.project.beyondzero.Activites.FeedBackActivity;
+import com.project.beyondzero.Activites.HospitalResourcesActivity;
 import com.project.beyondzero.R;
 import com.project.beyondzero.Model.User;
 

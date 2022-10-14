@@ -1,14 +1,16 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ViewAllActivity extends AppCompatActivity {
+import com.project.beyondzero.R;
+
+public class FeedBackActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_all);
+        setContentView(R.layout.activity_feed_back);
     }
 }
