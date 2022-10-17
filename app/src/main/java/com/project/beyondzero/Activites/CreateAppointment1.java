@@ -109,25 +109,25 @@ public class CreateAppointment1 extends AppCompatActivity {
 
             }
         });
-        submit_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ContentValues cv = new ContentValues();
-                cv.put("avatar",ImageViewToByte(image));
-                cv.put("name",name.getText().toString());
-                cv.put("date",pat_date.getText().toString());
-                cv.put("time",pat_time.getText().toString());
-                cv.put("title",title.getText().toString());
-                cv.put("patient",pat_name.getText().toString());
-                cv.put("phone",pat_phone.getText().toString());
-                sqLiteDatabase= dBmain.getWritableDatabase();
-                int recedit = sqLiteDatabase.update(TABLENAME,cv,"id"+id,null);
-                if (recedit!=-1){
-                    Toast.makeText(CreateAppointment1.this,"Booking successfully edited",Toast.LENGTH_SHORT).show();
-
-                }
-            }
-        });
+//        submit_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ContentValues cv = new ContentValues();
+//                cv.put("avatar",ImageViewToByte(image));
+//                cv.put("name",name.getText().toString());
+//                cv.put("date",pat_date.getText().toString());
+//                cv.put("time",pat_time.getText().toString());
+//                cv.put("title",title.getText().toString());
+//                cv.put("patient",pat_name.getText().toString());
+//                cv.put("phone",pat_phone.getText().toString());
+//                sqLiteDatabase= dBmain.getWritableDatabase();
+//                int recedit = sqLiteDatabase.update(TABLENAME,cv,"id"+id,null);
+//                if (recedit!=-1){
+//                    Toast.makeText(CreateAppointment1.this,"Booking successfully edited",Toast.LENGTH_SHORT).show();
+//
+//                }
+//            }
+//        });
 
     }
 

@@ -14,26 +14,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.beyondzero.Activites.CreateAppointment1;
 import com.project.beyondzero.Activites.CreateAppointmentActivity;
-import com.project.beyondzero.Fragments.HomeFragment;
-import com.project.beyondzero.Model.DoctorsModel;
+import com.project.beyondzero.Model.DoctorsModel1;
 import com.project.beyondzero.R;
 
 import java.util.ArrayList;
 
-public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHolder> {
+public class DoctorsAdapter1 extends RecyclerView.Adapter<DoctorsAdapter1.ViewHolder> {
 
-    public DoctorsAdapter(Context context, ArrayList<DoctorsModel> list, HomeFragment homeFragment) {
+
+    public DoctorsAdapter1(Context context, ArrayList<DoctorsModel1> list, CreateAppointmentActivity createAppointmentActivity) {
         this.context = context;
         this.list = list;
     }
 
     Context context;
-    ArrayList<DoctorsModel>list;
+    ArrayList<DoctorsModel1>list;
 
 
     @NonNull
     @Override
-    public DoctorsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DoctorsAdapter1.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.doctor_item_card, parent, false));
 
     }

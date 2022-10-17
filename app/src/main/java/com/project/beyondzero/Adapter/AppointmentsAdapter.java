@@ -1,5 +1,8 @@
 package com.project.beyondzero.Adapter;
 
+import static com.project.beyondzero.DBmain.TABLENAME;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -14,11 +17,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.project.beyondzero.Activites.CreateAppointment1;
+import com.project.beyondzero.DBmain;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
 
@@ -47,7 +52,7 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AppointmentsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AppointmentsAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         final  AppointmentsModel appointmentsModel = list.get(position);
         byte[]image = appointmentsModel.getAvatar();
         Bitmap bitmap= BitmapFactory.decodeByteArray(image,0,image.length);
@@ -82,6 +87,17 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
 
                                 break;
                             case  R.id.delete_menu:
+
+                                DBmain dBmain= new DBmain(context);
+                                sqLiteDatabase= dBmain.getReadableDatabase();
+                                long recdelete = sqLiteDatabase.delete(TABLENAME, "id="+appointmentsModel.getId(),null);
+                                if (recdelete!= -1){
+                                    Toast.makeText(context,"Appointment successfully deleted",Toast.LENGTH_SHORT).show();
+                                    list.remove(position);
+                                    notifyDataSetChanged();
+
+                                }
+
                                 break;
                             default:
                                 return false;

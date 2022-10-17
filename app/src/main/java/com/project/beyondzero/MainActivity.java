@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         ViewPagerAdapter viewPagerAdapter= new ViewPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPagerAdapter.add(new HomeFragment(), "HOME");
-        viewPagerAdapter.add(new AppiontmenFragment(), "APPOINTMENT");
+        viewPagerAdapter.add(new AppiontmenFragment(), "BOOK");
         viewPagerAdapter.add(new LabFragment(), "LAB");
         viewPagerAdapter.add(new ProfileFragment(), "PROFILE");
         viewPager.setAdapter(viewPagerAdapter);
