@@ -36,3 +36,23 @@ u
 Eapp/src/main/java/com/project/beyondzero/Adapter/NewsFeedAdapter.java,0\2\025c410e18da52e6273595ba575bd6e452f528f8
 l
 <app/src/main/java/com/project/beyondzero/SecondFragment.java,8\a\8a03a07327d1a19ac51d1590c463acd0812a9ae1
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+y
+Iapp/src/main/java/com/project/beyondzero/Activites/EditInforActivity.java,1\b\1bdf3c5966c11c445b70bf87714be2d180124fdb
+x
+Happ/src/main/java/com/project/beyondzero/Activites/FeedBackActivity.java,6\1\6193fe484709983ea63d0cb1afa5cc87de92919e
+s
+Capp/src/main/java/com/project/beyondzero/Activites/FQSActivity.java,1\0\10c9aa99547046e5806be618d1ed6925c6c99846
+
+Qapp/src/main/java/com/project/beyondzero/Activites/HospitalResourcesActivity.java,8\e\8ea5b2e087a285ee66281c3373743d193e4896de
+w
+Gapp/src/main/java/com/project/beyondzero/Fragments/ProfileFragment.java,e\8\e8cc2904f3293eda9c786b8a4cac13960d011aaa
+w
+Gapp/src/main/java/com/project/beyondzero/Activites/ViewAllActivity.java,0\d\0d148fa919afa312eace09a8d2868170e21136c7
+t
+Dapp/src/main/java/com/project/beyondzero/Adapter/DoctorsAdapter.java,e\e\ee97acbd0f354181f98290ae95aafccb1d4e4f74
+u
+Eapp/src/main/java/com/project/beyondzero/Adapter/DoctorsAdapter1.java,f\8\f8550126cb60a044b45b3e537dfc8a87df5b94e8
+j
+:app/src/main/java/com/project/beyondzero/MainActivity.java,a\c\ac243b0142c38cd092277e387b53e26fc8320c4c

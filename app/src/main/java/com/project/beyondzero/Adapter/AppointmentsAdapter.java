@@ -60,6 +60,7 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
         holder.name.setText(list.get(position).getName());
         holder.date.setText(list.get(position).getDate());
         holder.time.setText(list.get(position).getTime());
+        holder.date1.setText(list.get(position).getPatient());
         holder.title.setText(list.get(position).getTitle());
         holder.flow_menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +119,7 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
-        TextView name, date, time, title;
+        TextView name, date, time, title,date1;
         ImageButton flow_menu;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -129,6 +130,7 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
             date = itemView.findViewById(R.id.date);
             time = itemView.findViewById(R.id.time);
             title = itemView.findViewById(R.id.title);
+            date1 = itemView.findViewById(R.id.pat_date);
             flow_menu = itemView.findViewById(R.id.flow_menu);
         }
     }

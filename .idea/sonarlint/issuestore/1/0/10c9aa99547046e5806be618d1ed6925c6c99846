@@ -1,0 +1,14 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ò”ÝÁúÿÿÿÿ
+[
+java:S1659"EDeclare "details1" and all following declarations on a separate line.(Ü¡…Ã
+Y
+java:S1659"DDeclare "layout1" and all following declarations on a separate line.(üªÃ
+F
+java:S1172&"+Remove this unused method parameter "view".(þÎŸæúÿÿÿÿ
+F
+java:S1172,"+Remove this unused method parameter "view".(»«Ö·þÿÿÿÿ
+A
+java:S11722"+Remove this unused method parameter "view".(¤”…“
+A
+java:S11728"+Remove this unused method parameter "view".(ÇÕƒ¡

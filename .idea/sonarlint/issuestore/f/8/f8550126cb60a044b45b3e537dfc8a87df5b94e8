@@ -1,0 +1,13 @@
+
+
+java:S1319"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(‡ÊÌş8óÉÓ²¾0
+>
+java:S16042"(Make this anonymous inner class a lambda(Ö¹™º
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õÃ°Úÿÿÿÿÿ
+]
+java:S1172"@Remove this unused method parameter "createAppointmentActivity".(‡ÊÌş8æäå²¾0
+k	java:S116M"VRename this field "title_image" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³°Õ
+?
+java:S1659M")Declare "title_image" on a separate line.(³°Õ
+V
+java:S1659N"ADeclare "name" and all following declarations on a separate line.(³Ê¢
