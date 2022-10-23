@@ -14,13 +14,11 @@ conference).
 * Firebase- `Autentication of users and storage`
 * Sqlite- `data persistence`
 
-
-
 # Screenshots
 ## App screens
-<img src="Images/land.png" width="270" > <img src="Images/login.png" width="270" >
-<img src="Images/home.png" width="270" ><img src="Images/book.png" width="270" >
-<img src="Images/profile.png" width="270" >
+<img src="Images/land.png" width="180" > <img src="Images/login.png" width="180" >
+<img src="Images/home.png" width="180" ><img src="Images/book.png" width="180" >
+<img src="Images/profile.png" width="180" >
 
 
 ## Pre-requisites
