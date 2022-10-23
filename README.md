@@ -1,4 +1,10 @@
 # BeyondZeroCampaign
+Beyond zero health care initiative was conceived in June 2013 when her excellency
+Margaret Kenyatta the former first lady of the republic of Kenya committed to heighten advocacy efforts
+aimed at reducing preventable maternal and child deaths, as well as elimination of mother to
+child transmission of HIV and syphilis. This defining moment was during the first lady’s
+inaugural participation at the organization of African first ladies against HIV/aids (oafla
+conference).
 
 ## Technologies used
 * Java- `Backend.`
