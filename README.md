@@ -5,7 +5,10 @@
 * Xmls- `Frontend.`
 * Gradle- `(For Project building).`
 * Junit- `Testing`
-* Firebase- `Autentication of users`
+* Firebase- `Autentication of users and storage`
+* Sqlite- `data persistence`
+
+
 
 # Screenshots
 ## App screens
