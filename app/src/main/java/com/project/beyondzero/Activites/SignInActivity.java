@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.project.beyondzero.ForgotPasswordActivity;
 import com.project.beyondzero.MainActivity;
 import com.project.beyondzero.R;
 
@@ -83,5 +85,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void forgot(View view) {
+        startActivity(new Intent(SignInActivity.this, ForgotPasswordActivity.class));
+
     }
 }

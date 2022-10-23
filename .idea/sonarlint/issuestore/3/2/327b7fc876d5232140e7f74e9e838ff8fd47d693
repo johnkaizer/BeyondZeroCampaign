@@ -1,0 +1,15 @@
+
+z
+java:S1319("dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(Å¦æ³
+f	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¦æ³
+>
+java:S1604F"(Make this anonymous inner class a lambda(»ä”ö
+>
+java:S1604A"(Make this anonymous inner class a lambda(­·œ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õÃ°Úÿÿÿÿÿ
+O
+java:S3516H"9Refactor this method to not always return the same value.(ãÅÎ¹
+u	java:S116&"[Rename this field "appointment_item" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø‰Ó±úÿÿÿÿ
+i	java:S116{"TRename this field "flow_menu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Îô‚
+\
+java:S1659z"ADeclare "date" and all following declarations on a separate line.(Ò¦€¸üÿÿÿÿ

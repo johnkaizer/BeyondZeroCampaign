@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
@@ -28,6 +29,20 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen);
+        SharedPreferences preference= getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+        String FirstTime= preference.getString("FirstTimeInstall","");
+        if (FirstTime.equals("Yes")){
+            Intent intent=new Intent(OnBoardingScreenActivity.this,SignInActivity.class);
+            startActivity(intent);
+            finish();
+
+        }else {
+            SharedPreferences.Editor editor= preference.edit();
+            editor.putString("FirstTimeInstall","Yes");
+            editor.apply();
+
+
+        }
 
         skipbtn = findViewById(R.id.skip_btn);
         backbtn = findViewById(R.id.back_btn);

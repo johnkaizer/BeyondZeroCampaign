@@ -16,13 +16,17 @@
         android:theme="@style/Theme.BeyondZero"
         tools:targetApi="31">
         <activity
-            android:name=".Report2"
+            android:name=".InsuaranceActivity"
             android:exported="false"
             android:theme="@style/Theme.BeyondZero.NoActionBar"/>
         <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BeyondZero.NoActionBar" />
+        <activity
             android:name=".Report1"
             android:exported="false"
-            android:theme="@style/Theme.BeyondZero.NoActionBar"/>
+            android:theme="@style/Theme.BeyondZero.NoActionBar" />
         <activity
             android:name=".Activites.ViewAllActivity"
             android:exported="false"

@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
+import com.project.beyondzero.Activites.OnBoardingScreenActivity;
+import com.project.beyondzero.Activites.SignInActivity;
 import com.project.beyondzero.Adapter.ViewPagerAdapter;
 import com.project.beyondzero.Fragments.AppiontmenFragment;
 import com.project.beyondzero.Fragments.HomeFragment;

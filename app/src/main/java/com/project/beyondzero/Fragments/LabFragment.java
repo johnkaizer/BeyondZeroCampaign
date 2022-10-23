@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.project.beyondzero.R;
 import com.project.beyondzero.Report1;
-import com.project.beyondzero.Report2;
 
 public class LabFragment extends Fragment {
 
@@ -23,7 +22,6 @@ public class LabFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_lab, container, false);
 
         card1=root.findViewById(R.id.card1);
-        card2=root.findViewById(R.id.card2);
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,15 +30,6 @@ public class LabFragment extends Fragment {
 
             }
         });
-        card2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getContext(), Report2.class);
-                startActivity(i);
-
-            }
-        });
-
 
 
         return root;

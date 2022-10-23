@@ -26,6 +26,7 @@ import com.project.beyondzero.Activites.EditInforActivity;
 import com.project.beyondzero.Activites.FQSActivity;
 import com.project.beyondzero.Activites.FeedBackActivity;
 import com.project.beyondzero.Activites.HospitalResourcesActivity;
+import com.project.beyondzero.InsuaranceActivity;
 import com.project.beyondzero.R;
 import com.project.beyondzero.Model.User;
 
@@ -38,7 +39,7 @@ public class ProfileFragment extends Fragment {
     private String userID;
 
     Button button, btn,logout;
-    TextView faqs,feedback;
+    TextView faqs,feedback,health;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -52,6 +53,13 @@ public class ProfileFragment extends Fragment {
         progressBar = root.findViewById(R.id.progressBar);
         faqs = root.findViewById(R.id.textView25);
         feedback = root.findViewById(R.id.textView28);
+        health=root.findViewById(R.id.health);
+        health.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), InsuaranceActivity.class));
+            }
+        });
         faqs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

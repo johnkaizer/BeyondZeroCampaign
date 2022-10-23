@@ -16,8 +16,6 @@ m
 =app/src/test/java/com/project/beyondzero/ExampleUnitTest.java,9\9\99b3e06d024f28cf8f840183193fcfbaba9547cf
 Ä
 Papp/src/main/java/com/project/beyondzero/Adapter/OnBoardingViewPagerAdapter.java,5\3\5319b374ae7c48d734a7a8462f29114285c3b39b
-Ä
-Papp/src/main/java/com/project/beyondzero/Activites/OnBoardingScreenActivity.java,a\8\a8c69c3c7432ea5de469274258226d8f1f2db736
 v
 Fapp/src/main/java/com/project/beyondzero/Adapter/ViewPagerAdapter.java,c\2\c2ed4a3df914a1f0f97ad7ce555e0c8e557f53c8
 q
@@ -39,15 +37,11 @@ Capp/src/main/java/com/project/beyondzero/Activites/FQSActivity.java,1\0\10c9aa
 Å
 Qapp/src/main/java/com/project/beyondzero/Activites/HospitalResourcesActivity.java,8\e\8ea5b2e087a285ee66281c3373743d193e4896de
 w
-Gapp/src/main/java/com/project/beyondzero/Fragments/ProfileFragment.java,e\8\e8cc2904f3293eda9c786b8a4cac13960d011aaa
-w
 Gapp/src/main/java/com/project/beyondzero/Activites/ViewAllActivity.java,0\d\0d148fa919afa312eace09a8d2868170e21136c7
 t
 Dapp/src/main/java/com/project/beyondzero/Adapter/DoctorsAdapter.java,e\e\ee97acbd0f354181f98290ae95aafccb1d4e4f74
 u
 Eapp/src/main/java/com/project/beyondzero/Adapter/DoctorsAdapter1.java,f\8\f8550126cb60a044b45b3e537dfc8a87df5b94e8
-j
-:app/src/main/java/com/project/beyondzero/MainActivity.java,a\c\ac243b0142c38cd092277e387b53e26fc8320c4c
 d
 4app/src/main/java/com/project/beyondzero/DBmain.java,e\3\e3793f8021e0b3c20541cdefe5afa09baed06604
 q
