@@ -16,9 +16,9 @@ conference).
 
 # Screenshots
 ## App screens
-<img src="Images/land.png" width="180" > <img src="Images/login.png" width="180" >
-<img src="Images/home.png" width="180" ><img src="Images/book.png" width="180" >
-<img src="Images/profile.png" width="180" >
+<img src="Images/land.png" width="170" > <img src="Images/login.png" width="170" >
+<img src="Images/home.png" width="170" ><img src="Images/book.png" width="170" >
+<img src="Images/profile.png" width="170" >
 
 
 ## Pre-requisites
