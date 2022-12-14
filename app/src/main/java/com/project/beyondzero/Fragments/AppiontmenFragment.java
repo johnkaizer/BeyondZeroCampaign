@@ -1,13 +1,10 @@
 package com.project.beyondzero.Fragments;
 
-import static com.project.beyondzero.DBmain.TABLENAME;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,10 +14,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.project.beyondzero.Adapter.AppointmentsAdapter;
 import com.project.beyondzero.Activites.CreateAppointmentActivity;
-import com.project.beyondzero.DBmain;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
 import com.project.beyondzero.Activites.ViewAllActivity;
@@ -29,15 +31,12 @@ import java.util.ArrayList;
 
 
 public class AppiontmenFragment extends Fragment {
-    DBmain dBmain;
-    SQLiteDatabase sqLiteDatabase;
     RecyclerView appointmentRec;
-    AppointmentsAdapter appointmentsAdapter ;
-    ArrayList<AppointmentsModel> appointmentsModelList;
-
     CardView cardView2;
     Button all_btn;
-
+    AppointmentsAdapter appointmentsAdapter ;
+    ArrayList<AppointmentsModel> list;
+    Query databaseReference;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -47,11 +46,38 @@ public class AppiontmenFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_appiontmen, container, false);
         appointmentRec = root.findViewById(R.id.Appointments);
-        dBmain = new DBmain(getContext());
-        displayData();
-
         all_btn= root.findViewById(R.id.all);
-        appointmentRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL, false));
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("AppointmentDetails");
+        appointmentRec.setHasFixedSize(true);
+        appointmentRec.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL, false));
+        list = new ArrayList<>();
+        appointmentsAdapter = new AppointmentsAdapter(getContext(),list);
+        appointmentRec.setAdapter(appointmentsAdapter);
+        appointmentsAdapter.setOnItemClickListener(new AppointmentsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                list.remove(position);
+                appointmentsAdapter.notifyItemRemoved(position);
+                Toast.makeText(getContext(),"Successfully Canceled Appointment",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+
+                    AppointmentsModel appointmentsModel = dataSnapshot.getValue(AppointmentsModel.class);
+                    list.add(appointmentsModel);
+                }
+                appointmentsAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         cardView2=root.findViewById(R.id.cardView1);
         cardView2.setOnClickListener(new View.OnClickListener() {
@@ -69,26 +95,5 @@ public class AppiontmenFragment extends Fragment {
         });
 
         return root;
-    }
-
-
-    private void displayData() {
-        sqLiteDatabase = dBmain.getReadableDatabase();
-        Cursor cursor  = sqLiteDatabase.rawQuery("select * from "+TABLENAME+"",null);
-        ArrayList<AppointmentsModel>list = new ArrayList<>();
-        while (cursor.moveToNext()){
-            int id = cursor.getInt(0);
-            byte[]avatar = cursor.getBlob(1);
-            String name = cursor.getString(2);
-            String date = cursor.getString(3);
-            String time = cursor.getString(4);
-            String title = cursor.getString(5);
-            String patient = cursor.getString(6);
-            int phone = cursor.getInt(7);
-            list.add(new AppointmentsModel(id,avatar,name,title,patient,time,phone,date));
-        }
-        cursor.close();
-        appointmentsAdapter = new AppointmentsAdapter(getContext(), list, sqLiteDatabase, R.layout.appointment_item);
-        appointmentRec.setAdapter(appointmentsAdapter);
     }
 }

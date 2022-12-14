@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.project.beyondzero.R;
-import com.project.beyondzero.Report1;
+import com.project.beyondzero.Activites.Report1;
 
 public class LabFragment extends Fragment {
 

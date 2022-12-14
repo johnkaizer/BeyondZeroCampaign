@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Adapter;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,7 +19,6 @@ public class DBmain extends SQLiteOpenHelper {
         String query = "create table "+TABLENAME+" (id integer primary key, avatar blob, name text,date text, time text,title text,patient text,phone integer)";
         db.execSQL(query);
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String query ="drop table if exists "+TABLENAME+" ";

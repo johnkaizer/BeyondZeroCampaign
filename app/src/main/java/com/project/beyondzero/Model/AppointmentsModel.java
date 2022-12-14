@@ -1,89 +1,80 @@
 package com.project.beyondzero.Model;
 
 public class AppointmentsModel {
-    private int id;
-    byte[]avatar;
-    String name;
-    String date;
-    String time;
-    String title;
-    int phone;
-    String patient;
+    String AppointmentDate;
+    String DoctorName;
+    String DoctorTitle;
+    String DoctorPhone;
+    String AppointmentTime;
+    String PatPhone;
+    String PatName;
 
-
-    public AppointmentsModel(int id, byte[] avatar, String name, String date, String time, String title, int phone, String patient) {
-        this.id = id;
-        this.avatar = avatar;
-        this.name = name;
-        this.date = date;
-        this.time = time;
-        this.title = title;
-        this.phone = phone;
-        this.patient = patient;
-
+    public AppointmentsModel() {
     }
 
-    public int getId() {
-        return id;
+    public AppointmentsModel(String appointmentDate, String doctorName, String doctorTitle, String doctorPhone, String appointmentTime, String patPhone, String patName) {
+        AppointmentDate = appointmentDate;
+        DoctorName = doctorName;
+        DoctorTitle = doctorTitle;
+        DoctorPhone = doctorPhone;
+        AppointmentTime = appointmentTime;
+        PatPhone = patPhone;
+        PatName = patName;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getAppointmentDate() {
+        return AppointmentDate;
     }
 
-    public byte[] getAvatar() {
-        return avatar;
+    public void setAppointmentDate(String appointmentDate) {
+        AppointmentDate = appointmentDate;
     }
 
-    public void setAvatar(byte[] avatar) {
-        this.avatar = avatar;
+    public String getDoctorName() {
+        return DoctorName;
     }
 
-    public String getName() {
-        return name;
+    public void setDoctorName(String doctorName) {
+        DoctorName = doctorName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getDoctorTitle() {
+        return DoctorTitle;
     }
 
-    public String getDate() {
-        return date;
+    public void setDoctorTitle(String doctorTitle) {
+        DoctorTitle = doctorTitle;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public String getDoctorPhone() {
+        return DoctorPhone;
     }
 
-    public String getTime() {
-        return time;
+    public void setDoctorPhone(String doctorPhone) {
+        DoctorPhone = doctorPhone;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public String getAppointmentTime() {
+        return AppointmentTime;
     }
 
-    public String getTitle() {
-        return title;
+    public void setAppointmentTime(String appointmentTime) {
+        AppointmentTime = appointmentTime;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getPatPhone() {
+        return PatPhone;
     }
 
-    public int getPhone() {
-        return phone;
+    public void setPatPhone(String patPhone) {
+        PatPhone = patPhone;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public String getPatName() {
+        return PatName;
     }
 
-    public String getPatient() {
-        return patient;
-    }
-
-    public void setPatient(String patient) {
-        this.patient = patient;
+    public void setPatName(String patName) {
+        PatName = patName;
     }
 }

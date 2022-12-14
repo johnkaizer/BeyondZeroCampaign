@@ -1,4 +1,4 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +14,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.util.regex.Pattern;
+import com.project.beyondzero.R;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
     Button submit;

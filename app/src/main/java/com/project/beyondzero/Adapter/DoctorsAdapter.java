@@ -3,9 +3,11 @@ package com.project.beyondzero.Adapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,7 +48,14 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHold
         holder.name.setText(list.get(position).getName());
         holder.title.setText(list.get(position).getTitle());
         holder.patients.setText(list.get(position).getPatients());
+        holder.phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + Uri.encode(list.get(position).getPatients())));
+                context.startActivity(intent);
 
+            }
+        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,8 +72,6 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHold
             }
         });
 
-
-
     }
 
     @Override
@@ -76,6 +83,7 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHold
 
         ImageView image,title_image;
         TextView time, name, title,patients;
+        ImageButton phone;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -85,6 +93,7 @@ public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHold
             name =  itemView.findViewById(R.id.doc_name);
             title = itemView.findViewById(R.id.title_doc);
             patients = itemView.findViewById(R.id.patient_number);
+            phone = itemView.findViewById(R.id.phone);
         }
     }
 }

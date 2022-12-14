@@ -17,10 +17,7 @@
             android:id="@+id/imageView8"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            android:layout_marginBottom="16dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/doc1"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/image1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="Title:"
+            android:text="Date:"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -66,7 +63,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="28th Sept 2022"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -79,7 +75,7 @@
             android:layout_width="54dp"
             android:layout_height="23dp"
             android:layout_marginTop="3dp"
-            android:text="Patient:"
+            android:text="Time:"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -93,7 +89,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="11:00AM"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -106,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="Time:"
+            android:text="Title:"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -118,7 +113,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="Gynaecologist"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -132,7 +126,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="2dp"
             android:background="@color/white"
-            android:src="@drawable/more_vert_24"
+            android:src="@drawable/phone_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Date :"
+            android:text="Doc Phone:"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -149,17 +143,33 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <TextView
-            android:id="@+id/pat_date"
+            android:id="@+id/doc_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:text="12/29/2020"
             android:textColor="@color/green"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/pat_date1"
             app:layout_constraintStart_toEndOf="@+id/pat_date1"
             app:layout_constraintTop_toTopOf="@+id/pat_date1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/red"
+            android:padding="4dp"
+            android:text="CANCEL"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

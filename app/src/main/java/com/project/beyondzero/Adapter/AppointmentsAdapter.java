@@ -1,29 +1,20 @@
 package com.project.beyondzero.Adapter;
 
-import static com.project.beyondzero.DBmain.TABLENAME;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
+import android.net.Uri;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.project.beyondzero.Activites.CreateAppointment1;
-import com.project.beyondzero.DBmain;
 import com.project.beyondzero.Model.AppointmentsModel;
 import com.project.beyondzero.R;
 
@@ -34,79 +25,51 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
 
     Context context;
     ArrayList<AppointmentsModel>list;
-    SQLiteDatabase sqLiteDatabase;
-    int appointment_item;
+    private OnItemClickListener listener;
 
-    public AppointmentsAdapter(Context context, ArrayList<AppointmentsModel> list, SQLiteDatabase sqLiteDatabase, int appointment_item) {
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+
+    }
+    public void setOnItemClickListener(OnItemClickListener clickListener){
+        listener =clickListener;
+    }
+
+    public AppointmentsAdapter(Context context, ArrayList<AppointmentsModel> list) {
         this.context = context;
         this.list = list;
-        this.sqLiteDatabase = sqLiteDatabase;
-        this.appointment_item = appointment_item;
     }
 
     @NonNull
     @Override
     public AppointmentsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.appointment_item, parent, false));
+        Context context = parent.getContext();
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        View v =LayoutInflater.from(parent.getContext()).inflate(R.layout.appointment_item, parent, false);
+        return new ViewHolder(v,listener);
 
     }
 
     @Override
     public void onBindViewHolder(@NonNull AppointmentsAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        final  AppointmentsModel appointmentsModel = list.get(position);
-        byte[]image = appointmentsModel.getAvatar();
-        Bitmap bitmap= BitmapFactory.decodeByteArray(image,0,image.length);
-        holder.image.setImageBitmap(bitmap);
-        holder.name.setText(list.get(position).getName());
-        holder.date.setText(list.get(position).getDate());
-        holder.time.setText(list.get(position).getTime());
-        holder.date1.setText(list.get(position).getPatient());
-        holder.title.setText(list.get(position).getTitle());
+        holder.name.setText(list.get(position).getDoctorName());
+        holder.date.setText(list.get(position).getAppointmentDate());
+        holder.time.setText(list.get(position).getAppointmentTime());
+        holder.title.setText(list.get(position).getDoctorTitle());
+        holder.phone.setText(list.get(position).getDoctorPhone());
         holder.flow_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(context, holder.flow_menu);
-                popupMenu.inflate(R.menu.flow_menu);
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()){
-                            case R.id.edit_menu:
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + Uri.encode(list.get(position).getDoctorPhone())));
+                context.startActivity(intent);
 
-                                Bundle bundle = new Bundle();
-                                bundle.putInt("id",appointmentsModel.getId());
-                                bundle.putByteArray("avatar",appointmentsModel.getAvatar());
-                                bundle.putString("name",appointmentsModel.getName());
-                                bundle.putString("date",appointmentsModel.getDate());
-                                bundle.putString("time",appointmentsModel.getTime());
-                                bundle.putString("title",appointmentsModel.getTitle());
-                                bundle.putString("patient",appointmentsModel.getPatient());
-                                bundle.putInt("phone",appointmentsModel.getPhone());
-                                Intent intent = new Intent(context, CreateAppointment1.class);
-                                intent.putExtra("appointmentData",bundle);
-                                context.startActivity(intent);
+            }
+        });
+        holder.cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(holder.getAdapterPosition());
 
-                                break;
-                            case  R.id.delete_menu:
-
-                                DBmain dBmain= new DBmain(context);
-                                sqLiteDatabase= dBmain.getReadableDatabase();
-                                long recdelete = sqLiteDatabase.delete(TABLENAME, "id="+appointmentsModel.getId(),null);
-                                if (recdelete!= -1){
-                                    Toast.makeText(context,"Appointment successfully deleted",Toast.LENGTH_SHORT).show();
-                                    list.remove(position);
-                                    notifyDataSetChanged();
-
-                                }
-
-                                break;
-                            default:
-                                return false;
-                        }
-                        return false;
-                    }
-                });
-                popupMenu.show();
             }
         });
 
@@ -118,20 +81,19 @@ public class AppointmentsAdapter extends RecyclerView.Adapter<AppointmentsAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView image;
-        TextView name, date, time, title,date1;
+        TextView name, date, time, title,phone;
         ImageButton flow_menu;
-        public ViewHolder(@NonNull View itemView) {
+        AppCompatButton cancel;
+        public ViewHolder(@NonNull View itemView,OnItemClickListener listener) {
             super(itemView);
 
-
-            image =itemView.findViewById(R.id.imageView8);
             name = itemView.findViewById(R.id.doc_name);
             date = itemView.findViewById(R.id.date);
             time = itemView.findViewById(R.id.time);
             title = itemView.findViewById(R.id.title);
-            date1 = itemView.findViewById(R.id.pat_date);
+            phone = itemView.findViewById(R.id.doc_phone);
             flow_menu = itemView.findViewById(R.id.flow_menu);
+            cancel = itemView.findViewById(R.id.cancel_btn);
         }
     }
 }

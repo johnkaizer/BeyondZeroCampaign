@@ -11,18 +11,23 @@
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_forgot_password.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_fqsactivity.xml" value="0.15604959384352288" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_hospital_resources.xml" value="0.22" />
-        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_insuarance.xml" value="0.16228467815049863" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_insuarance.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_main.xml" value="0.16228467815049863" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_on_boarding_screen.xml" value="0.16409791477787852" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_report1.xml" value="0.15604959384352288" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_report2.xml" value="0.15604959384352288" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_sign_up.xml" value="0.1675929884566054" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/activity_view_all.xml" value="0.22" />
-        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/appointment_item.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/appointment_item.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/doctor_item_card.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_appiontmen.xml" value="0.1675929884566054" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_home.xml" value="0.1675929884566054" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_lab.xml" value="0.22" />
-        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/fragment_profile.xml" value="0.3821656050955414" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/health_item.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/news_feed_items.xml" value="0.16092475067996373" />
+        <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/layout/onboarding_layout.xml" value="0.16409791477787852" />
         <entry key="..\:/AndroidStudioProjects/BeyondZero/app/src/main/res/menu/flow_menu.xml" value="0.1675929884566054" />
       </map>
     </option>

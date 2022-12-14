@@ -1,10 +1,11 @@
-package com.project.beyondzero;
+package com.project.beyondzero.Activites;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.project.beyondzero.R;
 
 public class Report1 extends AppCompatActivity {
     PDFView report1;

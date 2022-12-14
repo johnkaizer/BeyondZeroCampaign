@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragments.ProfileFragment"
+    android:layout_height="wrap_content"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Fragments.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,11 +17,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Profile"
             android:gravity="center"
-            android:textStyle="bold"
+            android:text="Profile"
             android:textColor="@color/black"
             android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -55,8 +54,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Open 24 Hours"
-            android:textStyle="bold"
             android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintStart_toEndOf="@+id/imageView9"
             app:layout_constraintTop_toTopOf="@+id/imageView9" />
@@ -125,8 +124,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="50dp"
             android:background="@drawable/call_btn_background"
-            android:text="View Resources"
             android:onClick="open"
+            android:text="View Resources"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -262,21 +261,33 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/healthRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/editbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="4dp"
                     android:layout_marginEnd="50dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="8dp"
                     android:background="@drawable/call_btn_background"
                     android:text="EDIT"
                     android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+                    app:layout_constraintTop_toBottomOf="@+id/healthRV" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
@@ -294,6 +305,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+
         <ImageView
             android:id="@+id/imageView15"
             android:layout_width="wrap_content"
@@ -332,8 +344,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="FQS"
             android:onClick="help"
+            android:text="FQS"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -356,8 +368,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="Feedback"
             android:onClick="feedback"
+            android:text="Feedback"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"

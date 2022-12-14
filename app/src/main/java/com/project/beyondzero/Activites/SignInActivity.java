@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -17,14 +19,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.project.beyondzero.ForgotPasswordActivity;
 import com.project.beyondzero.MainActivity;
 import com.project.beyondzero.R;
 
 public class SignInActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private EditText EditTextEmail,editTextPassword;
-
+    boolean passwordVisible;
     private FirebaseAuth mAuth;
 
     @Override
@@ -36,10 +37,38 @@ public class SignInActivity extends AppCompatActivity {
         EditTextEmail = findViewById(R.id.editText2);
         editTextPassword = findViewById(R.id.editText3);
         progressBar = findViewById(R.id.progressBar);
+        editTextPassword.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int Right=2;
+                if (event.getAction()==MotionEvent.ACTION_UP){
+                    if (event.getRawX()>=editTextPassword.getRight()-editTextPassword.getCompoundDrawables()[Right].getBounds().width()){
+                        int selection=editTextPassword.getSelectionEnd();
+                        if (passwordVisible){
+                            //show password
+                            editTextPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.visibility_off_24,0);
+                            //hide password
+                            editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible=false;
 
+                        }else {
+                            //show password
+                            editTextPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.visibility_24,0);
+                            //show password
+                            editTextPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible=true;
+
+                        }
+                        editTextPassword.setSelection(selection);
+                        return  true;
+
+                    }
+                }
+                return false;
+            }
+        });
 
     }
-
     public void signUp(View view) {
         startActivity(new Intent(SignInActivity.this, SignUpActivity.class));
         finish();
